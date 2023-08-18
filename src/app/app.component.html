@@ -1,5 +1,18 @@
-<button mat-button>Click me</button>
-<mat-form-field>
-  <input matInput placeholder="Enter your name">
-</mat-form-field>
-<mat-icon>favorite</mat-icon>
+
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav>
+    <app-sidenav-list (closeSideNav)="sidenav.close()"></app-sidenav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-toolbar (SideNavToggle)="sidenav.toggle()"></app-toolbar>
+    <app-navtabs></app-navtabs>
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
