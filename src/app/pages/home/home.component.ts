@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   form = this.fb.group({
     // ... other form controls ...
-    lessons: this.fb.array([])
+    articles: this.fb.array([])
   });
 
   constructor(private fb: FormBuilder) {
@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get lessons() {
-    return this.form.controls["lessons"] as FormArray;
+  get articles() {
+    return this.form.controls["articles"] as FormArray;
   }
 
-  addLesson() {
-    const lessonForm = this.fb.group({
+  addArticle() {
+    const articleForm = this.fb.group({
       codeArticle : ['', Validators.required],
       designation : ['', Validators.required],
       PI: ['', Validators.required],
@@ -36,11 +36,11 @@ export class HomeComponent implements OnInit {
       tva: ['', Validators.required],
       totalTTC: ['', Validators.required],
     });
-    this.lessons.push(lessonForm);
+    this.articles.push(articleForm);
   }
 
-  deleteLesson(lessonIndex: number) {
-    this.lessons.removeAt(lessonIndex);
+  deleteArticle(lessonIndex: number) {
+    this.articles.removeAt(lessonIndex);
   }
 
 

@@ -1,8 +1,8 @@
 <h3>Add Articles:</h3>
 
 <div class="add-lessons-form" [formGroup]="form">
-  <ng-container formArrayName="lessons">
-    <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
+  <ng-container formArrayName="articles">
+    <ng-container *ngFor="let articleForm of articles.controls; let i = index">
       <div class="lesson-form-row" [formGroupName]="i">
         <mat-form-field appearance="fill">
           <mat-select formControlName="codeArticle"
@@ -69,14 +69,14 @@
         </mat-form-field>
 
 
-        <mat-icon class="delete-btn" (click)="deleteLesson(i)">
+        <mat-icon class="delete-btn" (click)="deleteArticle(i)">
           delete_forever
         </mat-icon>
       </div>
     </ng-container>
   </ng-container>
 
-  <button mat-mini-fab (click)="addLesson()">
+  <button mat-mini-fab (click)="addArticle()">
     <mat-icon class="add-course-btn">add</mat-icon>
   </button>
 
