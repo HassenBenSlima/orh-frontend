@@ -13,7 +13,7 @@ import {NavtabsComponent} from "./pages/navigation/navtabs/navtabs.component";
 import {FoodBeverageComponent} from "./pages/food-beverage/food-beverage.component";
 import {LifestyleComponent} from "./pages/lifestyle/lifestyle.component";
 import {CelebrationsComponent} from "./pages/celebrations/celebrations.component";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./pages/app-routing/app-routing.module";
 import {MatButtonModule} from "@angular/material/button";
 import {MatBadgeModule} from "@angular/material/badge";
@@ -23,6 +23,9 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {HomeComponent} from "./pages/home/home.component";
+import {MatOptionModule} from "@angular/material/core";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -50,7 +53,11 @@ import {HomeComponent} from "./pages/home/home.component";
     MatToolbarModule,
     MatTabsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    MatOptionModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
